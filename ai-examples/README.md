@@ -12,7 +12,7 @@ This directory contains AI-powered automation examples demonstrating both helpfu
 
 ## Examples Overview
 
-### Good AI Automations 😇
+### Good AI Automations
 
 #### 1. Code Review Assistant
 **Location**: `./good/code-review-assistant/`
@@ -53,7 +53,7 @@ Transcribes and summarizes meetings with action items.
 
 **Tech Stack:** Azure Cognitive Services, Python
 
-### Evil AI Automations 😈
+### Evil AI Automations
 
 #### 1. Overly Excited Email Responder
 **Location**: `./evil/excited-responder/`
@@ -61,7 +61,7 @@ Transcribes and summarizes meetings with action items.
 Responds to emails with excessive enthusiasm and emojis.
 
 **Features:**
-- Adds random emojis 🎉🚀⭐
+- Adds random emojis
 - USES CAPS LOCK RANDOMLY
 - Includes multiple exclamation points!!!
 - Asks too many questions???

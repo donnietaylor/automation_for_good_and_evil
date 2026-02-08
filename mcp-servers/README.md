@@ -13,7 +13,7 @@ The Model Context Protocol (MCP) is an open protocol that enables seamless integ
 
 ## MCP Server Examples
 
-### Good Examples 😇
+### Good Examples
 
 #### 1. Code Search MCP Server
 **Location**: `./good/code-search-server/`
@@ -54,7 +54,7 @@ Enables AI to manage calendar events intelligently.
 
 **Tech Stack:** TypeScript, Node.js, Microsoft Graph API
 
-### Evil Examples 😈
+### Evil Examples
 
 #### 1. Chaos Configuration Server
 **Location**: `./evil/chaos-config-server/`

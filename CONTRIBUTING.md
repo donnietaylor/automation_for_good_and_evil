@@ -271,4 +271,4 @@ Your contributions make this project better for everyone. We appreciate your tim
 
 ---
 
-*Remember: We're here to learn, teach, and have fun with automation!* 🚀
+*Remember: We're here to learn, teach, and have fun with automation!*

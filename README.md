@@ -1,8 +1,8 @@
-# Automation for Good and Evil 🤖😈😇
+# Automation for Good and Evil
 
 A repository showcasing the power of Azure and AI-based automations through humorous and entertaining demonstrations of how automation can be used for both "good" and "evil" purposes.
 
-## 🎯 Purpose
+## Purpose
 
 This repository contains code, demos, and presentation materials that demonstrate:
 - How Azure-based automations can streamline (or complicate) daily tasks
@@ -11,7 +11,7 @@ This repository contains code, demos, and presentation materials that demonstrat
 - Workflow automation with n8n and Langflow
 - Funny and hilarious real-world scenarios where automation helps or "hinders"
 
-## 🏗️ Repository Structure
+## Repository Structure
 
 ```
 ├── demos/              # Live demo code and scripts
@@ -24,7 +24,7 @@ This repository contains code, demos, and presentation materials that demonstrat
 └── docs/              # Additional documentation
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -49,21 +49,21 @@ This repository contains code, demos, and presentation materials that demonstrat
 
 3. Follow the README in each subdirectory for specific setup instructions
 
-## 💡 Example Scenarios
+## Example Scenarios
 
-### Good Automations 😇
+### Good Automations
 - Automated code reviews that actually help
 - Smart email sorting and response suggestions
 - Intelligent meeting scheduling that respects work-life balance
 - Automated testing and deployment pipelines
 
-### "Evil" Automations 😈
+### "Evil" Automations
 - Auto-responders that are *too* enthusiastic
 - Meeting bots that schedule conflicts
 - Code formatters that use tabs instead of spaces (or vice versa!)
 - Automated reminders that never stop reminding
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Azure**: Logic Apps, Functions, DevOps Pipelines
 - **AI/ML**: OpenAI, Azure AI Services, various LLMs
@@ -71,7 +71,7 @@ This repository contains code, demos, and presentation materials that demonstrat
 - **Integration**: MCP servers, REST APIs, webhooks
 - **Languages**: Python, JavaScript/TypeScript, PowerShell
 
-## 📚 Documentation
+## Documentation
 
 For detailed documentation on each component, see the [docs](./docs) folder:
 - [Azure Automations Guide](./docs/azure-automations.md)
@@ -79,7 +79,7 @@ For detailed documentation on each component, see the [docs](./docs) folder:
 - [MCP Server Setup](./docs/mcp-setup.md)
 - [n8n Workflows](./docs/n8n-workflows.md)
 
-## 🤝 Contributing
+## Contributing
 
 This is primarily a demonstration repository, but if you have funny automation ideas to add:
 1. Fork the repository
@@ -87,18 +87,18 @@ This is primarily a demonstration repository, but if you have funny automation i
 3. Add your automation example
 4. Submit a pull request with a good description
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 All "evil" examples are meant to be humorous and educational. Please use automation responsibly and ethically in real-world scenarios!
 
-## 📝 License
+## License
 
 MIT License - See [LICENSE](./LICENSE) file for details
 
-## 🎤 Presentations
+## Presentations
 
 This repository supports live presentations and demos. Check the [presentations](./presentations) folder for slide decks and speaker notes.
 
 ---
 
-*Remember: With great automation comes great responsibility... and great opportunities for mischief!* 🚀
+*Remember: With great automation comes great responsibility... and great opportunities for mischief!*
