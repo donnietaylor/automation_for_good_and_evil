@@ -153,7 +153,7 @@ Makes everything SUPER EXCITING!!!
 
 **Example:**
 - Input: "Task completed"
-- Output: "OMG!!! The TASK is COMPLETED!!! This is ABSOLUTELY AMAZING!!! LET'S CELEBRATE!!!"
+- Output: "OMG!!! 🎉🎉🎉 The TASK is COMPLETED!!! 🚀🚀🚀 This is ABSOLUTELY AMAZING!!! ⭐⭐⭐ LET'S CELEBRATE!!! 🎊🎊🎊"
 
 #### 3. Unnecessary Complexity Engine
 **File**: `./evil/complexity-engine-flow.json`
