@@ -71,8 +71,8 @@ This is SO EXCITING!!! 🎊🎉🎈
 TEAM 🎉🎉🎉, PLEASE REVIEW 📊📈💼 the QUARTERLY report!!!!!!! 🚀🚀🚀
 The MEETING 📅📅 is SCHEDULED ⭐⭐⭐ for TUESDAY ⏰⏰⏰ at 2 PM!!!!!!!!! 🎯🎯
 Let me KNOW 🤔🤔🤔 if you have QUESTIONS????????? 💭💭💭
-This is SO INCREDIBLY AMAZING EXCITING!!!!!!!!!! 
-WOW!!! Can you BELIEVE this???!!!
+This is SO INCREDIBLY AMAZING EXCITING!!!!!!!!!! 🎊🎉🎈🎆🎇✨💫⭐🌟
+WOW!!! 🤩🤩🤩 Can you BELIEVE this???!!! 😱😱😱
 ```
 
 ## Chaos Levels
