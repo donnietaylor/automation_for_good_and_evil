@@ -8,7 +8,7 @@ This directory contains slide decks, speaker notes, and presentation resources f
 - **File**: `automation-for-good-and-evil.pptx` (or `.pdf`)
 - **Duration**: 45-60 minutes
 - **Format**: PowerPoint/PDF
-- **Last Updated**: [Date]
+- **Note**: Presentation files will be added based on your specific talk
 
 ### Lightning Talk Version
 - **File**: `lightning-talk-15min.pptx`

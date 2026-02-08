@@ -23,7 +23,7 @@ This is intentionally problematic for demonstration purposes!
 ## Prerequisites
 
 - Python 3.9+
-- OpenAI API key (for even more chaos)
+- No external API keys needed (pure chaos!)
 
 ## Installation
 
@@ -89,16 +89,14 @@ WOW!!! 🤩🤩🤩 Can you BELIEVE this???!!! 😱😱😱
 3. Adds emojis based on chaos level
 4. Randomly capitalizes words
 5. Multiplies punctuation
-6. Optionally uses AI to add even MORE enthusiasm
+6. Uses rule-based enthusiasm amplification
 
 ## Configuration
 
 Edit `.env` to configure:
 
 ```env
-OPENAI_API_KEY=your_api_key_here
 DEFAULT_CHAOS_LEVEL=7
-ENABLE_AI_ENHANCEMENT=true
 ```
 
 ## Safety Features
