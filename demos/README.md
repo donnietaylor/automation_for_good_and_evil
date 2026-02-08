@@ -4,7 +4,7 @@ This directory contains ready-to-run demonstration code for the "Automation for 
 
 ## Available Demos
 
-### 1. Good Examples 😇
+### 1. Good Examples
 
 #### Auto-Code-Review Bot
 - **Location**: `./good/auto-code-review/`
@@ -24,7 +24,7 @@ This directory contains ready-to-run demonstration code for the "Automation for 
 - **Tech**: Microsoft Graph API, Azure Functions
 - **Run Time**: 4 minutes
 
-### 2. Evil Examples 😈
+### 2. Evil Examples
 
 #### Overly Enthusiastic Bot
 - **Location**: `./evil/enthusiastic-bot/`

@@ -35,7 +35,7 @@ Access n8n at: `http://localhost:5678`
 
 ## Workflow Examples
 
-### Good Workflows 😇
+### Good Workflows
 
 #### 1. Smart Email Processor
 **File**: `./good/smart-email-processor.json`
@@ -93,7 +93,7 @@ Prepares meeting materials automatically.
 
 **Use Case:** Ensure everyone is prepared for meetings
 
-### Evil Workflows 😈
+### Evil Workflows
 
 #### 1. Random Meeting Generator
 **File**: `./evil/random-meeting-generator.json`

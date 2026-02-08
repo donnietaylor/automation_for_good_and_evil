@@ -1,4 +1,4 @@
-# Emoji Chaos Bot 🎉😈🚀
+# Emoji Chaos Bot
 
 An "evil" automation that adds way too many emojis to your text communications!
 
@@ -8,13 +8,13 @@ This is an **"evil"** automation example that demonstrates what happens when aut
 
 ## Features
 
-- 😈 Adds random emojis after every few words
-- 🎉 RANDOMLY CAPITALIZES things
-- ❗ Multiplies exclamation points!!!
-- 🤔 Asks unnecessary questions???
-- 🚀 Makes everything sound more exciting than it is
+- Adds random emojis after every few words
+- RANDOMLY CAPITALIZES things
+- Multiplies exclamation points!!!
+- Asks unnecessary questions???
+- Makes everything sound more exciting than it is
 
-## ⚠️ Warning
+## Warning
 
 This is intentionally problematic for demonstration purposes! 
 
@@ -80,7 +80,7 @@ WOW!!! 🤩🤩🤩 Can you BELIEVE this???!!! 😱😱😱
 - **Level 1-3**: Mild (occasional emoji, some caps)
 - **Level 4-6**: Moderate (regular emojis, frequent caps)
 - **Level 7-8**: High (lots of emojis, mostly caps)
-- **Level 9-10**: MAXIMUM CHAOS!!! 🎉🚀⭐ (ALL CAPS, EMOJI EVERYWHERE!!!)
+- **Level 9-10**: MAXIMUM CHAOS!!! (ALL CAPS, EMOJI EVERYWHERE!!!)
 
 ## How It Works
 
@@ -129,11 +129,11 @@ python emoji_bot.py --restore professional_email.txt
 
 This example demonstrates:
 
-- ❌ **Over-automation**: Not everything needs to be "enhanced"
-- ❌ **Context ignorance**: One size doesn't fit all
-- ❌ **User experience**: Sometimes less is more
-- ✅ **Testing is crucial**: Always test automation before deploying
-- ✅ **User control**: Give users options to disable/configure
+- **Over-automation**: Not everything needs to be "enhanced"
+- **Context ignorance**: One size doesn't fit all
+- **User experience**: Sometimes less is more
+- **Testing is crucial**: Always test automation before deploying
+- **User control**: Give users options to disable/configure
 
 ## Real-World Lessons
 
@@ -160,8 +160,8 @@ python emoji_bot.py --restore-all ./
 ## Pro Tip
 
 Want to actually annoy your friends (harmlessly)? This is the tool! 
-Just don't use it on actual work communications... 😅
+Just don't use it on actual work communications...
 
 ---
 
-*Remember: With great power comes great responsibility... to not annoy everyone!* 🚀
+*Remember: With great power comes great responsibility... to not annoy everyone!*

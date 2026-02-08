@@ -8,12 +8,12 @@ Langflow is a visual framework for building AI applications and workflows. It pr
 
 ## Features
 
-- 🎨 Visual workflow builder
-- 🔗 Pre-built LangChain components
-- 🚀 Quick prototyping of AI applications
-- 📦 Export and share flows
-- 🔌 Easy integration with various LLMs
-- 💾 Built-in data persistence
+- Visual workflow builder
+- Pre-built LangChain components
+- Quick prototyping of AI applications
+- Export and share flows
+- Easy integration with various LLMs
+- Built-in data persistence
 
 ## Installation
 
@@ -42,7 +42,7 @@ Access Langflow at: `http://localhost:7860`
 
 ## Flow Examples
 
-### Good Flows 😇
+### Good Flows
 
 #### 1. Intelligent Document Q&A
 **File**: `./good/document-qa-flow.json`
@@ -115,7 +115,7 @@ Automated customer support with FAQ knowledge base.
 
 **Use Case:** First-line customer support
 
-### Evil Flows 😈
+### Evil Flows
 
 #### 1. Corporate Jargon Generator
 **File**: `./evil/jargon-generator-flow.json`
@@ -144,7 +144,7 @@ Makes everything SUPER EXCITING!!!
 **Components:**
 - Message Input
 - Enthusiasm Amplifier
-- Emoji Injector 🎉🚀⭐
+- Emoji Injector
 - CAPS LOCK Randomizer
 - Exclamation Multiplier!!!
 - GPT model with excitement prompt
@@ -293,11 +293,11 @@ Common parameters to tune:
 6. ✅ Monitor costs
 
 ### Evil Flow Design (For Demo)
-1. 😈 Deliberately overcomplicate
-2. 😈 Ignore user preferences
-3. 😈 Maximize confusion
-4. 😈 Create circular dependencies
-5. 😈 But still be safe and reversible!
+1. Deliberately overcomplicate
+2. Ignore user preferences
+3. Maximize confusion
+4. Create circular dependencies
+5. But still be safe and reversible!
 
 ## Testing Flows
 
