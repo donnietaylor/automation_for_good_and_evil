@@ -1,6 +1,12 @@
 # Presentation Materials
 
-This directory contains slide decks, speaker notes, and presentation resources for "Automation for Good and Evil" talks.
+This directory contains slide decks, speaker notes, and presentation resources for **"Automation for Good… and Evil"** talks.
+
+## Session Overview
+
+**Automation isn't inherently good or evil. It's just power, and what matters is how we choose to use it.**
+
+This session demonstrates how automation and AI can genuinely help communities, nonprofits, and civic efforts—and how those same skills can power well-timed shenanigans and playful chaos. Good first, chaos second, all powered by the same automation engine.
 
 ## Available Presentations
 
@@ -19,37 +25,41 @@ This directory contains slide decks, speaker notes, and presentation resources f
 ## Presentation Structure
 
 ### 1. Introduction (5 minutes)
-- What is automation?
-- The dual nature of automation
-- Why Azure and AI?
+- What is automation and why does it matter?
+- The power of real-time systems
+- Automation isn't good or evil—it's how we choose to use it
+- Session structure: Good first, chaos second
 
-### 2. The "Good" Side (15 minutes)
-- Helpful automation examples
-- Live demo: Smart Code Review Bot
-- Best practices
-- Real-world benefits
+### 2. The "Good" Side - Community Impact (20 minutes)
+- Real-time automations that help communities
+- Nonprofit and civic applications
+- Environmental monitoring and alerts
+- Live demo: Community support automation
+- AI workflows that make a difference
+- Best practices for helping others
 
-### 3. The "Evil" Side (15 minutes)
-- Humorous "problematic" automations
-- Live demo: Overly Enthusiastic Bot
-- What can go wrong
-- Lessons learned
+### 3. The "Evil" Side - Playful Chaos (15 minutes)
+- Well-timed shenanigans and harmless mischief
+- Same patterns, different applications
+- Live demo: Chaos automation (safe and reversible!)
+- What can go wrong (and why that's funny)
+- Lessons learned from automation mishaps
 
-### 4. Technical Deep Dive (15 minutes)
-- Azure automation services
-- AI integration patterns
-- MCP servers explained
-- n8n workflow examples
+### 4. Technical Patterns (10 minutes)
+- Real-time event triggers and responses
+- AI-driven decision making
+- Environmental signals and IoT integration
+- Practical patterns you can use today
 
-### 5. Q&A (10 minutes)
-- Open discussion
-- Additional demo requests
+### 5. Q&A and Takeaways (10 minutes)
+- Session takeaways review
 - Resources and next steps
+- How to get started with your own automations
 
 ## Speaker Notes
 
 ### Opening Hook
-Start with a funny example of automation gone wrong (or right!) to engage the audience immediately.
+Start with a powerful example of automation helping a real community or nonprofit—show the impact first. Then contrast with a funny example of harmless chaos to set the tone for the session.
 
 ### Demo Tips
 - Always have a backup video recording of demos
@@ -58,11 +68,12 @@ Start with a funny example of automation gone wrong (or right!) to engage the au
 - Practice transitions between slides and live demos
 
 ### Key Messages
-1. Automation is powerful but requires careful thought
-2. AI enhances automation but adds complexity
-3. Start simple, iterate, and always test
-4. Consider edge cases and failure modes
-5. Have fun but be responsible!
+1. **Automation is power** - It's not good or evil, it's how you use it
+2. **Real-time reactions matter** - Build systems that respond to people, events, and environment
+3. **Community first** - Use automation to genuinely help before adding chaos
+4. **Same patterns, different purposes** - The skills transfer both ways
+5. **Start practical** - You can implement these ideas right away
+6. **Have fun responsibly** - Playful chaos should be harmless and well-timed
 
 ## Assets
 
@@ -73,20 +84,23 @@ Start with a funny example of automation gone wrong (or right!) to engage the au
 
 ## Customizing for Your Audience
 
-### For Developers
-- Focus on code examples and technical details
-- Deep dive into MCP servers and API integration
-- More live coding, less slides
+### For Nonprofit/Community Leaders
+- Emphasize real-world community impact
+- Focus on practical, low-cost solutions
+- Show how automation can amplify their work
+- Less technical detail, more outcome-focused
 
-### For Management
-- Emphasize business value and ROI
-- Focus on process automation
-- More high-level concepts, fewer technical details
+### For Developers
+- Focus on technical patterns and code examples
+- Deep dive into real-time event systems
+- Show AI integration and MCP servers
+- More live coding, architectural discussions
 
 ### For General Tech Audience
-- Balance between technical and conceptual
-- Focus on entertaining examples
-- Include both good and evil scenarios equally
+- Balance between impact and implementation
+- Focus on entertaining examples that teach
+- Include both good and chaos scenarios equally
+- Make it relatable to everyday situations
 
 ## Resources for Attendees
 
