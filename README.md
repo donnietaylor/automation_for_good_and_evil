@@ -89,6 +89,7 @@ This repository demonstrates how to build systems that react in real time to peo
 ## Documentation
 
 For detailed documentation on each component, see the [docs](./docs) folder:
+- **[Session Overview](./docs/session-overview.md)** - Complete session details and takeaways
 - [Azure Automations Guide](./docs/azure-automations.md)
 - [AI Integration Guide](./docs/ai-integration.md)
 - [MCP Server Setup](./docs/mcp-setup.md)
