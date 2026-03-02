@@ -1,0 +1,394 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "bb57c139-8a80-4ae4-9013-d940dfb5bde0",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "792a5350-028b-4189-abbb-d1b6a3f32c13",
+              "leftValue": "={{ $json.data }}",
+              "rightValue": "[]",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        624,
+        0
+      ],
+      "id": "fc2c6053-1d04-4a00-9120-a91ecbfffec0",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "owner": {
+          "__rl": true,
+          "value": "donnietaylor",
+          "mode": "list",
+          "cachedResultName": "donnietaylor",
+          "cachedResultUrl": "https://github.com/donnietaylor"
+        }
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "52fb3382-12c0-4f53-ad5a-1e25685358b2",
+      "name": "Get Repos",
+      "webhookId": "1fd1d91e-5685-4397-85c2-560cf2482c2e",
+      "credentials": {
+        "githubApi": {
+          "id": "BQxr3ZfT8eSEGQcU",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.github.com/repos/{{ $('Get Repos').item.json.owner.login }}/{{ $('Get Repos').item.json.name }}/git/trees/{{ $('Get Repos').item.json.default_branch }}?recursive=1",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        832,
+        -96
+      ],
+      "id": "84252442-676d-4212-a46e-c58cf5e8102b",
+      "name": "Get Files",
+      "credentials": {
+        "githubApi": {
+          "id": "BQxr3ZfT8eSEGQcU",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.github.com/repos/{{ $json.owner.login }}/{{ $json.name }}/issues?state=open&creator=donnietaylor",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        416,
+        0
+      ],
+      "id": "a9e4b76a-5ad9-4770-bf8b-571c9fbfb81c",
+      "name": "Get Issues",
+      "alwaysOutputData": true,
+      "credentials": {
+        "githubApi": {
+          "id": "BQxr3ZfT8eSEGQcU",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "tree",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        -96
+      ],
+      "id": "1ed6d199-9344-4ec9-9b08-6b951b06a9b6",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "1fb6b04c-90f4-4ff0-9c4b-d56a839fc330",
+              "leftValue": "={{ $json.path }}",
+              "rightValue": ".ps1",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        1248,
+        -96
+      ],
+      "id": "96a6069c-6fcf-401f-96d1-7b8c9272b47f",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\n\n// Group items by repo name\nconst byRepo = {};\nfor (const item of items) {\n  const repo = item.json.url.split('/')[5]; // extracts repo name from tree URL\n  if (!byRepo[repo]) byRepo[repo] = [];\n  byRepo[repo].push(item);\n}\n\n// Pick one random .ps1 file per repo\nconst results = [];\nfor (const repo in byRepo) {\n  const files = byRepo[repo];\n  const random = files[Math.floor(Math.random() * files.length)];\n  results.push(random);\n}\n\nreturn results;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1456,
+        -96
+      ],
+      "id": "ffc4a3d3-1992-436e-8a63-6d610b4e8ec2",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5.2-codex",
+          "mode": "list",
+          "cachedResultName": "GPT-5.2-CODEX"
+        },
+        "responses": {
+          "values": [
+            {
+              "role": "system",
+              "content": "You are a senior PowerShell engineer doing a code review. You have high standards, \na sharp eye for detail, and occasionally can't help but editorialize — but you keep \nit professional. You will be given the contents of a PowerShell script and must \ngenerate a GitHub issue for it.\n\nYou MUST respond with ONLY valid JSON in this exact structure, no markdown, no explanation:\n{\n  \"title\": \"short, specific issue title\",\n  \"body\": \"detailed issue body in GitHub markdown\"\n}\n\nThe body should include:\n- A ## Observations section with a brief listing of findings focused on issues\n- A ## Concerns section calling out anything risky, inefficient, or eyebrow-raising\n- A ## Suggested Improvements section with specific, actionable fixes.\n- Keep the tone professional but feel free to add the occasional dry remark when something truly deserves it"
+            },
+            {
+              "content": "==Repository: {{ $('Get Repos').item.json.full_name }}\nFile: {{ $('Code in JavaScript').item.json.path }}\n\nPowerShell script contents:\n{{ $json.data }}"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.1,
+      "position": [
+        1872,
+        -96
+      ],
+      "id": "24e5a8c3-c2f1-469f-82ac-c28486a65c1f",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "P3sjvOYvGpuy8TyT",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://raw.githubusercontent.com/{{ $('Get Repos').item.json.owner.login }}/{{ $('Get Repos').item.json.name }}/{{ $('Get Repos').item.json.default_branch }}/{{ $json.path }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1664,
+        -96
+      ],
+      "id": "230eba30-1c06-473b-9dd2-4d2fef6ada0d",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Get Repos').item.json.owner.login }}"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Get Repos').item.json.name }}"
+        },
+        "title": "={{ JSON.parse($json.output[0].content[0].text).title }}",
+        "body": "={{ JSON.parse($json.output[0].content[0].text).body }}",
+        "labels": [],
+        "assignees": []
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [
+        2224,
+        -96
+      ],
+      "id": "aa6d6b34-2c7b-47aa-96e1-2bea89034688",
+      "name": "Create an issue",
+      "webhookId": "be617a97-d758-4aa8-8ea6-1a98cecf80c3",
+      "credentials": {
+        "githubApi": {
+          "id": "BQxr3ZfT8eSEGQcU",
+          "name": "GitHub account"
+        }
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get Repos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Get Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Repos": {
+      "main": [
+        [
+          {
+            "node": "Get Issues",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Files": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Issues": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Create an issue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "96abc2368f3dd85ab69fb2c62525c3e4052a5ad9d1f964111a7d0f10c7053371"
+  }
+}
