@@ -5,7 +5,7 @@
 
 .DESCRIPTION
     Formats code files using the OpenAI API according to best practices.
-    Supports Python, JavaScript, and TypeScript files.
+    Supports PowerShell, JavaScript, and TypeScript files.
 
 .PARAMETER Path
     File or directory to format
@@ -20,9 +20,9 @@
     Process directories recursively
 
 .EXAMPLE
-    .\formatter.ps1 -Path path\to\file.py
+    .\formatter.ps1 -Path path\to\file.ps1
     .\formatter.ps1 -Path path\to\directory -Recursive
-    .\formatter.ps1 -Path path\to\file.py -DryRun
+    .\formatter.ps1 -Path path\to\file.ps1 -DryRun
 #>
 
 [CmdletBinding()]
@@ -72,7 +72,7 @@ function Get-Language {
 
     $ext = [System.IO.Path]::GetExtension($FilePath).ToLower()
     $languageMap = @{
-        '.py'  = 'python'
+        '.ps1' = 'powershell'
         '.js'  = 'javascript'
         '.ts'  = 'typescript'
         '.jsx' = 'javascript'
@@ -106,8 +106,8 @@ Format this $Language code according to best practices:
 - Use consistent indentation
 - Add type hints (if applicable)
 - Use meaningful variable names
-- Add docstrings to functions
-- Follow language-specific style guides (PEP 8 for Python, etc.)
+- Add comment-based help to functions
+- Follow language-specific style guides (PowerShell Best Practices, etc.)
 - Preserve all functionality
 
 Return ONLY the formatted code, no explanations.

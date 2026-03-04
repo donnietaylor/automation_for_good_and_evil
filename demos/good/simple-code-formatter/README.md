@@ -8,7 +8,7 @@ This is a "good" automation example that demonstrates how AI can help maintain c
 
 ## Features
 
-- ✅ Formats Python, JavaScript, and TypeScript files
+- ✅ Formats PowerShell, JavaScript, and TypeScript files
 - ✅ Applies consistent style guidelines
 - ✅ Preserves code functionality
 - ✅ Provides clear diff of changes
@@ -31,13 +31,13 @@ Copy-Item .env.example .env
 
 ```powershell
 # Format a single file
-.\formatter.ps1 -Path path\to\file.py
+.\formatter.ps1 -Path path\to\file.ps1
 
 # Format all files in a directory
 .\formatter.ps1 -Path path\to\directory -Recursive
 
 # Dry run (preview changes without applying)
-.\formatter.ps1 -Path path\to\file.py -DryRun
+.\formatter.ps1 -Path path\to\file.ps1 -DryRun
 ```
 
 ## How It Works
@@ -51,17 +51,22 @@ Copy-Item .env.example .env
 ## Example
 
 **Before:**
-```python
-def hello(name):
-  print("Hello "+name)
-  return None
+```powershell
+function hello($n){
+write-host "Hello "+$n
+return $null}
 ```
 
 **After:**
-```python
-def hello(name: str) -> None:
-    """Greet a person by name."""
-    print(f"Hello {name}")
+```powershell
+function Invoke-Hello {
+    <#
+    .SYNOPSIS
+        Greet a person by name.
+    #>
+    param([string]$Name)
+    Write-Host "Hello $Name"
+}
 ```
 
 ## Configuration
@@ -91,13 +96,13 @@ For presentations:
 
 ```powershell
 # Show messy code
-Get-Content example_messy.py
+Get-Content example_messy.ps1
 
 # Run formatter
-.\formatter.ps1 -Path example_messy.py
+.\formatter.ps1 -Path example_messy.ps1
 
 # Show formatted result
-Get-Content example_messy.py
+Get-Content example_messy.ps1
 ```
 
 ## Limitations
@@ -110,7 +115,7 @@ Get-Content example_messy.py
 ## Alternative Approaches
 
 For production use, consider:
-- Black (Python)
+- PSScriptAnalyzer (PowerShell)
 - Prettier (JavaScript/TypeScript)
 - ESLint (JavaScript/TypeScript)
 
